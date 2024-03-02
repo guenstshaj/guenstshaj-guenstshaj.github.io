@@ -1,195 +1,53 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Archivo+Black&display=swap");
-:root {
-  --background1: #f1f1f1;
-  --background2: #fbfbfb;
-  --colorgray1: #2c3e50;
-  --colorgray2: #dbdbdb;
-  --colorblack100: #000;
-  --colorblack60: rgba(0, 0, 0, 0.6);
-  --colorblack38: rgba(0, 0, 0, 0.38);
-  --colorwhite100: #fff;
-  --colorwhite67: rgba(255, 255, 255, 0.67);
-  --colorbtn1: rgba(26, 134, 197);
-  --colorbtn2: rgb(28, 145, 212);
-  --colorgreen: #228b22;
-}
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amsha</title>
+    <link rel="stylesheet" href="/assets/styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="#"
+          ><h1>Am<span>sha</span></h1></a
+        >
+      </div>
+      <nav class="navbar">
+        <a href="#" class="active"><i class="bx bxs-home"></i>Accueil</a>
+        <a href="#"><i class="bx bxs-customize"></i>Produits</a>
+        <a href="#"><i class="bx bxs-bell"></i>Annonce</a>
+        <a href="#"><i class="bx bxs-phone"></i>Contact</a>
+      </nav>
+      <div class="menu"><i class="bx bx-menu"></i></div>
+    </header>
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+    <!------------  Container !-------------->
 
-body {
-  background-color: var(--background1);
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
+    <div class="container">
+      <div class="content">
+        <hgroup>
+          <h4>Nous suivre</h4>
+          <h1>Mangez bien et local</h1>
+          <p>
+            Nos Produits : Explorez notre large gamme de tomates juteuses, de
+            piments épicés et de gombos croquants.
+          </p>
+          <button>Découvrir nos produits</button>
+        </hgroup>
+      </div>
+    </div>
 
-/*=================================== Navigation Bar =================================*/
-header {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  background-color: rgba(255, 255, 255, 0.5);
-  height: 50px;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 30px;
-  padding-right: 30px;
-  box-shadow: rgba(196, 196, 196, 0.3) 0px 1px 2px 0px,
-    rgba(181, 221, 252, 0.15) 0px 2px 6px 2px;
-}
-header .logo a {
-  text-decoration: none;
-}
-header .logo h1 {
-  font-weight: 600;
-  font-size: 26px;
-  color: var(--colorblack100);
-}
-header .logo span {
-  color: var(--colorgreen);
-  text-decoration: underline;
-  font-weight: 200;
-}
-header .menu {
-  display: none;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  gap: 35px;
-}
-nav a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: var(--colorblack38);
-  padding: 10px 13px;
-  gap: 5px;
-  transition: 0.5s ease-in-out;
-}
-nav a:hover,
-nav a.active {
-  color: var(--colorgreen);
-}
-
-/*================================ Container ================================*/
-.container {
-  padding: 50px 20px;
-  width: 100%;
-  background: linear-gradient(var(--colorblack38), var(--colorblack60)),
-    url("/assets/images/roman-synkevych-fjj7lVpCxRE-unsplash.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/*================================ Content ==================================*/
-.content {
-  max-width: 1080px;
-  margin: 0 auto;
-}
-
-.content hgroup h4 {
-  font-size: 2rem;
-  color: var(--colorgray2);
-  font-weight: 200;
-}
-.content hgroup h1 {
-  font-size: 3.5rem;
-  color: var(--colorwhite100);
-  font-family: "Alfa Slab One", serif;
-  font-weight: 800;
-  letter-spacing: 5px;
-}
-.content hgroup p {
-  color: var(--colorgray2);
-}
-.content hgroup button {
-  padding: 10px 15px;
-  margin-top: 15px;
-  border: 1px solid var(--colorgray2);
-  color: var(--colorblack38);
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  gap: 0;
-  background-color: var(--colorgray2);
-  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.content hgroup button:hover {
-  color: var(--colorblack100);
-  cursor: pointer;
-}
-/*============================== Responsive ================================*/
-
-@media only screen and (max-width: 520px) {
-  nav {
-    position: fixed;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    background-color: var(--background2);
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    gap: 0;
-  }
-  nav a {
-    display: flex;
-    flex-direction: column;
-    font-size: 8px;
-  }
-  nav a i {
-    font-size: 24px;
-  }
-}
-
-@media only screen and (min-width: 520px) and (max-width: 950px) {
-  header .menu {
-    display: block;
-    font-size: 24px;
-    z-index: 100;
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
-  }
-  nav {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 0;
-    background-color: var(--background2);
-    gap: 0;
-    height: 100vh;
-    padding-top: 50px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    transition: width 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 10;
-  }
-  nav.open {
-    width: 300px;
-  }
-  nav a {
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: flex-start;
-    gap: 1.5rem;
-    padding-left: 1.5rem;
-    border-bottom: 1px solid var(--colorgray2);
-  }
-}
+    <script src="/assets/scripts/main.js"></script>
+  </body>
+</html>
